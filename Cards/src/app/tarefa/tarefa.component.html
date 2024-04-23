@@ -1,0 +1,44 @@
+<div class="body">
+  <form class="example-form" >
+    <mat-form-field class="example-full-width">
+      <mat-label>Resumo: </mat-label>
+      <input matInput placeholder="Ex: DNS com falha">
+    </mat-form-field>
+
+    <br />
+
+    <label>Tipo de Tarefa:</label>
+
+    <mat-radio-group aria-label="Selecione o tipo de tarefa: ">
+      <mat-radio-button value="1">Tarefa</mat-radio-button>
+      <mat-radio-button value="2">Bug</mat-radio-button>
+    </mat-radio-group>
+
+    <br />
+
+    <mat-form-field>
+      <mat-label>Prioridade</mat-label>
+      <select matNativeControl required>
+        <option value="Baixa">Baixa</option>
+        <option value="Media">Média</option>
+        <option value="Alta">Alta</option>
+        <option value="Critica">Crítica</option>
+      </select>
+    </mat-form-field>
+
+    <br />
+
+    <label>Prazo final:</label>
+    <input type="text">
+
+    <br />
+
+    <label>Descrição:</label>
+    <textarea rows="4" cols="50"></textarea>
+
+    <br />
+
+    <button>Enviar</button>
+
+  </form>
+</div>
