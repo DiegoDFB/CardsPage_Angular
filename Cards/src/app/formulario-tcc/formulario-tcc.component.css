@@ -1,9 +1,9 @@
 .bg {
   background-color: rgb(109, 109, 109);
   width: 100vw;
-  height: 100vh;
+  height: 800px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -12,6 +12,7 @@ form {
   border-radius: 10px;
   padding: 30px;
   background-color: rgb(85, 85, 85);
+  margin: 20px 35px 20px 35px;
 }
 
 h1 {
@@ -24,4 +25,3 @@ h1 {
 .campoForm {
   margin-bottom: 30px;
 }
-

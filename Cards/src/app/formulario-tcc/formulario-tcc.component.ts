@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-cadastro',
-  templateUrl: './cadastro.component.html',
-  styleUrls: ['./cadastro.component.css']
+  selector: 'app-formulario-tcc',
+  templateUrl: './formulario-tcc.component.html',
+  styleUrls: ['./formulario-tcc.component.css']
 })
-export class CadastroComponent {
-
+export class FormularioTCCComponent {
   ocultarSenha = true;
 
   constructor(private formBuilder: FormBuilder) {}

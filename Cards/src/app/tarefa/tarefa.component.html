@@ -1,43 +1,58 @@
 <div class="body">
-  <form class="example-form" >
-    <mat-form-field class="example-full-width">
+  <form class="example-form" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()">
+    <mat-form-field class="example-full-width" class="formCampo">
       <mat-label>Resumo: </mat-label>
-      <input matInput placeholder="Ex: DNS com falha">
+      <input matInput placeholder="Ex: DNS com falha"  formControlName="resumo">
+
+      <mat-error *ngIf="cadastroForm.controls.resumo.hasError('required')">É obrigatório inserir o resumo</mat-error>
+
     </mat-form-field>
 
     <br />
 
-    <label>Tipo de Tarefa:</label>
+    <label class="formCampo">Tipo de Tarefa:</label>
 
-    <mat-radio-group aria-label="Selecione o tipo de tarefa: ">
-      <mat-radio-button value="1">Tarefa</mat-radio-button>
-      <mat-radio-button value="2">Bug</mat-radio-button>
+    <mat-radio-group aria-label="Selecione o tipo de tarefa: " formControlName="tipo" class="formCampo">
+      <mat-radio-button value="Tarefa">Tarefa</mat-radio-button>
+      <mat-radio-button value="Bug">Bug</mat-radio-button>
+
+      <mat-error *ngIf="cadastroForm.controls.tipo.hasError('required')">É obrigatório selecionar o tipo de tarefa</mat-error>
+
     </mat-radio-group>
 
     <br />
 
-    <mat-form-field>
+    <mat-form-field class="formCampo">
       <mat-label>Prioridade</mat-label>
-      <select matNativeControl required>
+      <select matNativeControl required formControlName="prioridade">
         <option value="Baixa">Baixa</option>
         <option value="Media">Média</option>
         <option value="Alta">Alta</option>
         <option value="Critica">Crítica</option>
       </select>
+
+      <mat-error *ngIf="cadastroForm.controls.prioridade.hasError('required')">É obrigatório selecionar a prioridade</mat-error>
+
     </mat-form-field>
 
     <br />
 
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="example-full-width" class="formCampo">
       <mat-label>Prazo final: </mat-label>
-      <input matInput type="date">
+      <input matInput type="date" formControlName="prazo">
+
+      <mat-error *ngIf="cadastroForm.controls.prazo.hasError('required')">É obrigatório inserir o prazo</mat-error>
+
     </mat-form-field>
 
     <br />
 
-    <mat-form-field class="example-full-width formularioData">
+    <mat-form-field class="example-full-width formularioData formCampo">
       <mat-label>Descrição: </mat-label>
-      <input matInput>
+      <input matInput formControlName="descricao">
+
+      <mat-error *ngIf="cadastroForm.controls.descricao.hasError('maxLength')">Máximo de 100 caracteres</mat-error>
+
     </mat-form-field>
 
     <br />

@@ -1,0 +1,116 @@
+<div class="bg">
+  <form class="example-form formularioCorpo" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()">
+
+
+    <mat-form-field class="example-full-width campoForm">
+      <mat-label>Nome</mat-label>
+      <input matInput placeholder="Ex. Horácio Augusto da Silveira" formControlName="nome">
+
+      <mat-error *ngIf="cadastroForm.controls.email.hasError('required')">É obrigatório inserir o nome</mat-error>
+
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field class="example-full-width campoForm">
+      <mat-label>Sobrenome</mat-label>
+      <input matInput placeholder="Ex. Horácio Augusto da Silveira" formControlName="nome">
+
+      <mat-error *ngIf="cadastroForm.controls.email.hasError('required')">É obrigatório inserir o sobrenome</mat-error>
+
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field class="example-full-width campoForm">
+      <mat-label>CPF</mat-label>
+      <input matInput placeholder="Ex. Horácio Augusto da Silveira" formControlName="nome">
+
+      <mat-error *ngIf="cadastroForm.controls.email.hasError('required')">É obrigatório inserir o CPF</mat-error>
+
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field class="example-full-width campoForm">
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="Ex. horacio@etec.sp.gov.br" formControlName="email">
+
+        <mat-error *ngIf="cadastroForm.controls.email.hasError('required')">E-mail é obrigatório</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.email.hasError('required')">E-mail inválido</mat-error>
+
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field class="campoForm">
+        <mat-label>Senha</mat-label>
+        <input matInput [type]="ocultarSenha ? 'password' : 'text'" formControlName="senha">
+        <button mat-icon-button matSuffix (click)="ocultarSenha = !ocultarSenha" [attr.aria-label]="'Ocultar senha'" [attr.aria-pressed]="ocultarSenha">
+          <mat-icon>{{ocultarSenha ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+
+        <mat-error *ngIf="cadastroForm.controls.senha.hasError('required')">Senha é obrigatório</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.senha.hasError('minLength')">A senha deve ter pelo menos 6 caracteres</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.senha.hasError('maxLength')">A senha deve ter no máximo 12 caracteres</mat-error>
+
+      </mat-form-field>
+
+      <br />
+
+    <mat-form-field class="campoForm">
+        <mat-label>Confirmar senha</mat-label>
+        <input matInput [type]="ocultarSenha ? 'password' : 'text'" formControlName="confirmarSenha">
+        <button mat-icon-button matSuffix (click)="ocultarSenha = !ocultarSenha" [attr.aria-label]="'Ocultar senha'" [attr.aria-pressed]="ocultarSenha">
+          <mat-icon>{{ocultarSenha ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+
+        <mat-error *ngIf="cadastroForm.controls.confirmarSenha.hasError('required')">Confirmar senha é obrigatório</mat-error>
+        <mat-error *ngIf="cadastroForm.controls.confirmarSenha.hasError('required')">As senhas devem ser as mesmas</mat-error>
+
+      </mat-form-field>
+
+    <br />
+
+    <button mat-flat-button color="primary">Enviar</button>
+
+  </form>
+
+  <form class="example-form" [formGroup]="cadastroForm" (ngSubmit)="onEnviar()">
+
+    <mat-form-field class="example-full-width campoForm">
+      <mat-label>CEP</mat-label>
+      <input matInput placeholder="Ex. Horácio Augusto da Silveira" formControlName="nome">
+
+      <mat-error *ngIf="cadastroForm.controls.email.hasError('required')">É obrigatório inserir o CEP</mat-error>
+
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field class="example-full-width campoForm">
+      <mat-label>Endereço</mat-label>
+      <input matInput placeholder="Ex. Horácio Augusto da Silveira" formControlName="nome">
+
+      <mat-error *ngIf="cadastroForm.controls.email.hasError('required')">É obrigatório inserir o endereço</mat-error>
+
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field class="example-full-width campoForm">
+      <mat-label>Complemento</mat-label>
+      <input matInput placeholder="Ex. Horácio Augusto da Silveira" formControlName="nome">
+
+      <mat-error *ngIf="cadastroForm.controls.email.hasError('required')">É obrigatório inserir o complemento</mat-error>
+
+    </mat-form-field>
+
+    <br />
+
+    <button mat-flat-button color="primary">Enviar</button>
+
+  </form>
+</div>
+
+

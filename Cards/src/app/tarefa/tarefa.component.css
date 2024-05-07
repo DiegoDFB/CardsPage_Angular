@@ -1,7 +1,11 @@
 .example-form {
   min-width: 150px;
-  max-width: 500px;
+  max-width: 800px;
   width: 100%;
+  height: 600px;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 50px;
 }
 
 .example-full-width {
@@ -11,8 +15,18 @@
 .body {
   background-color: rgb(61, 61, 61);
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+
+.formCampo {
+  margin-bottom: 20px;
 }
 
 .formularioData {
-
+  height: 150px;
 }

@@ -14,13 +14,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { FormularioTCCComponent } from './formulario-tcc/formulario-tcc.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TarefaComponent,
     CardsComponent,
-    CadastroComponent
+    CadastroComponent,
+    FormularioTCCComponent
   ],
   imports: [
     BrowserModule,
