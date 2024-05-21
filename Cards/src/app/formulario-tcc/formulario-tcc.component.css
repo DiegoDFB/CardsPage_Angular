@@ -1,3 +1,9 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .bg {
   background-color: rgb(109, 109, 109);
   width: 100vw;
@@ -13,6 +19,7 @@ form {
   padding: 30px;
   background-color: rgb(85, 85, 85);
   margin: 20px 35px 20px 35px;
+  width: 800px;
 }
 
 h1 {
@@ -24,4 +31,12 @@ h1 {
 
 .campoForm {
   margin-bottom: 30px;
+}
+
+.doenca {
+  width: 400px
+}
+
+.doencaSeleciona {
+  width: 300px;
 }

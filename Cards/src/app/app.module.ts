@@ -15,6 +15,8 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { FormularioTCCComponent } from './formulario-tcc/formulario-tcc.component';
+import { MAT_DATE_LOCALE, MatNativeDateModule } from '@angular/material/core'; 
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 @NgModule({
   declarations: [
@@ -34,9 +36,12 @@ import { FormularioTCCComponent } from './formulario-tcc/formulario-tcc.componen
     FormsModule,
     MatIconModule,
     ReactiveFormsModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatCheckboxModule
   ],
-  providers: [],
+  providers: [ { provide: MAT_DATE_LOCALE, useValue: 'en-GB' } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
